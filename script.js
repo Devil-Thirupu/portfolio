@@ -431,7 +431,7 @@ if (form) {
       if (canUseEmailJs) {
         await emailjs.send(emailJsServiceId, emailJsTemplateId, {
           from_name: name,
-          from_email: email,
+          reply_to: email,
           message,
           subject
         });

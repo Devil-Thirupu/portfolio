@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thirupathi | Web Developer & CSE Student</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Particle Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ======= NAVBAR ======= -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">Thiru<span class="dot">.</span></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"      class="nav-link">Home</a></li>
+        <li><a href="#about"     class="nav-link">About</a></li>
+        <li><a href="#skills"    class="nav-link">Skills</a></li>
+        <li><a href="#projects"  class="nav-link">Projects</a></li>
+        <li><a href="#github"    class="nav-link">GitHub</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact"   class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======= HERO ======= -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <p class="hero-greeting">Hello everyone..! 👋</p>
+        <h1 class="hero-name">I Am <span class="neon-text">Thirupathi</span></h1>
+        <div class="hero-role-wrap">
+          <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+        </div>
+        <p class="hero-desc">
+          A Computer Science Engineering student passionate about building innovative technology solutions — 
+          web applications, embedded systems, and real-world problem-solving projects.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="assets/resume.pdf" class="btn btn-outline" download>
+            <i class="fas fa-download"></i> Resume
+          </a>
+        </div>
+        <div class="hero-social">
+          <a href="https://github.com/Devil-Thirupu" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:thirupathi2308@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/918668097076" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <div class="img-glow-ring">
+          <img
+            src="image/thiru pic.png"
+            alt="Thirupathi"
+            class="hero-img"
+            onerror="this.style.display='none'; document.getElementById('heroFallback').style.display='flex';"
+          />
+          <div class="hero-img-fallback" id="heroFallback">T</div>
+        </div>
+        <div class="status-badge"><span class="pulse-dot"></span> Open to Opportunities</div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ======= ABOUT ======= -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// about_me</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <div class="about-img-glow">
+            <img
+              src="image/thiru pic.png"
+              alt="Thirupathi"
+              class="about-img"
+              onerror="this.style.display='none'; document.getElementById('aboutFallback').style.display='flex';"
+            />
+            <div class="about-img-fallback" id="aboutFallback">T</div>
+          </div>
+        </div>
+        <div class="about-cards reveal">
+          <div class="about-icon-card"><i class="fas fa-laptop-code"></i><span>CSE Student</span></div>
+          <div class="about-icon-card"><i class="fas fa-microchip"></i><span>Embedded Dev</span></div>
+          <div class="about-icon-card"><i class="fas fa-flask"></i><span>Experimenter</span></div>
+          <div class="about-icon-card"><i class="fas fa-robot"></i><span>AI Enthusiast</span></div>
+          <div class="about-icon-card"><i class="fas fa-gamepad"></i><span>Game Developer</span></div>
+        </div>
+        <div class="about-text reveal">
+          <h3>Building <span class="neon-text">innovative solutions</span>,<br/>one project at a time.</h3>
+          <p>
+            I'm a Computer Science Engineering student who enjoys building practical technology solutions.
+            My interests span web development, embedded systems using microcontrollers like ESP32,
+            and experimenting with creative electronics projects.
+          </p>
+          <p>
+            I love learning new technologies and creating projects that solve real-world problems.
+            Combining software skills with hardware experimentation, I bridge the digital and physical worlds.
+          </p>
+          <div class="about-stats">
+            <div class="stat-box"><span class="stat-num">4+</span><span class="stat-label">Projects</span></div>
+            <div class="stat-box"><span class="stat-num">5+</span><span class="stat-label">Tech Skills</span></div>
+            <div class="stat-box"><span class="stat-num">2027</span><span class="stat-label">Graduating</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SKILLS ======= -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// tech_stack</span>
+        <h2 class="section-title">Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title"><i class="fas fa-code"></i> Programming</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C Programming</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title"><i class="fas fa-tools"></i> Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title"><i class="fas fa-microchip"></i> Hardware</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">ESP32</span>
+            <span class="skill-tag">Electronics</span>
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">Raspberry Pi</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title"><i class="fas fa-robot"></i> AI Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">ChatGPT</span>
+            <span class="skill-tag">Claude</span>
+            <span class="skill-tag">Lovable</span>
+            <span class="skill-tag">gemini</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title"><i class="fas fa-gamepad"></i> Game Development</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Unity</span>
+            <span class="skill-tag">Unreal Engine</span>
+            <span class="skill-tag">blender</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PROJECTS ======= -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// featured_work</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
+            <div class="project-links">
+              <a href="https://pulse-swift-care.lovable.app/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Pulse Swift Care</h3>
+          <p class="project-desc">A smart emergency response and patient health monitoring system. Connects patients, ambulances, and hospitals instantly during critical situations.</p>
+          <ul class="project-features">
+            <li><i class="fas fa-check"></i> Real-time patient monitoring</li>
+            <li><i class="fas fa-check"></i> Emergency alert system</li>
+            <li><i class="fas fa-check"></i> Ambulance coordination</li>
+            <li><i class="fas fa-check"></i> Hospital communication interface</li>
+          </ul>
+          <div class="project-tech"><span>Web App</span><span>Healthcare</span><span>Lovable</span></div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-microphone-alt"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Devil-Thirupu" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Personal Voice Assistant</h3>
+          <p class="project-desc">An offline smart voice assistant built using ESP32. Performs local commands and device automation without relying on cloud services — runs on own server &amp; database.</p>
+          <ul class="project-features">
+            <li><i class="fas fa-check"></i> Offline voice processing</li>
+            <li><i class="fas fa-check"></i> Local command execution</li>
+            <li><i class="fas fa-check"></i> Device automation</li>
+            <li><i class="fas fa-check"></i> Low power consumption</li>
+          </ul>
+          <div class="project-tech"><span>Care taker</span><span>ESP32</span><span>Embedded</span></div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-server"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Devil-Thirupu" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">DIY Laptop Server</h3>
+          <p class="project-desc">Converted an old laptop into a fully functional server using a lightweight Linux distribution. Repurposed hardware for hosting and self-managed services.</p>
+          <ul class="project-features">
+            <li><i class="fas fa-check"></i> Linux server setup</li>
+            <li><i class="fas fa-check"></i> Hardware repurposing</li>
+            <li><i class="fas fa-check"></i> Self-hosted services</li>
+            <li><i class="fas fa-check"></i> Portable &amp; efficient</li>
+          </ul>
+          <div class="project-tech"><span>Linux</span><span>Server</span><span>DIY</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= GITHUB ======= -->
+  <section id="github" class="section github-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// open_source</span>
+        <h2 class="section-title">GitHub Projects</h2>
+        <p class="section-subtitle">Explore more from my GitHub repositories</p>
+      </div>
+      <div class="github-grid" id="github-projects">
+        <div class="loading-repos"><i class="fas fa-spinner fa-spin"></i> Loading repositories...</div>
+      </div>
+      <div class="github-cta">
+        <a href="https://github.com/Devil-Thirupu" target="_blank" class="btn btn-outline">
+          <i class="fab fa-github"></i> View All on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= EDUCATION ======= -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// academic_background</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="education-card reveal">
+        <div class="edu-year">2023 – 2027</div>
+        <div class="edu-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+        <div class="edu-details">
+          <h3>Bachelor of Computer Science Engineering</h3>
+          <p>JKKN College of Engineering and Technology</p>
+          <span class="edu-badge"><i class="fas fa-circle"></i> Currently Enrolled</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CONTACT ======= -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// get_in_touch</span>
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-subtitle">Feel free to reach out for collaborations or just a friendly hello!</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Let's <span class="neon-text">connect</span> and build<br/>something great together.</h3>
+          <div class="contact-items">
+            <a href="mailto:thirupathi2308@gmail.com" class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div><span class="contact-label">Email</span><span>thirupathi2308@gmail.com</span></div>
+            </a>
+            <a href="https://github.com/Devil-Thirupu" target="_blank" class="contact-item">
+              <div class="contact-icon"><i class="fab fa-github"></i></div>
+              <div><span class="contact-label">GitHub</span><span>github.com/Devil-Thirupu</span></div>
+            </a>
+            <a href="https://wa.me/918668097076" target="_blank" class="contact-item">
+              <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+              <div><span class="contact-label">WhatsApp</span><span>+91 8668097076</span></div>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="contact-item">
+              <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div><span class="contact-label">LinkedIn</span><span>linkedin.com/in/thirupathi</span></div>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="contact-item">
+              <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+              <div><span class="contact-label">Instagram</span><span>instagram.com/thirupathi</span></div>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contact-form" novalidate autocomplete="off">
+          <input type="hidden" id="subject" name="subject" value="Portfolio Contact Form Message" />
+          <div class="form-group hidden-field">
+            <label for="bot-field">Leave this field empty</label>
+            <input type="text" id="bot-field" name="bot_field" autocomplete="off" tabindex="-1" aria-hidden="true" />
+          </div>
+          <div class="form-group">
+            <input type="text"  id="name"    name="name"    placeholder=" " autocomplete="name" required />
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email"   name="email"   placeholder=" " autocomplete="email" required />
+            <label for="email">Your Email</label>
+          </div>
+          <div class="form-group">
+            <textarea           id="message" name="message" rows="5" placeholder=" " autocomplete="off" required></textarea>
+            <label for="message">Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary full-w">
+            <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="form-msg" id="formMsg" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">T<span class="dot">.</span></div>
+      <p>© 2026 Thirupathi. Built with <span class="neon-text">❤</span> &amp; caffeine.</p>
+      <div class="footer-social">
+        <a href="https://github.com/Devil-Thirupu" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:thirupathi2308@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    if (window.emailjs) {
+      emailjs.init('YOUR_PUBLIC_KEY');
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -18,9 +18,9 @@
 
   // Subtle grid lines
   function drawGrid() {
-    ctx.strokeStyle = 'rgba(0,255,231,0.03)';
+    ctx.strokeStyle = 'rgba(255,255,255,0.012)';
     ctx.lineWidth = 1;
-    const spacing = 60;
+    const spacing = 80;
     for (let x = 0; x < W; x += spacing) {
       ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
     }
@@ -35,10 +35,10 @@
       this.x  = Math.random() * W;
       this.y  = Math.random() * H;
       this.r  = Math.random() * 1.5 + 0.4;
-      this.vx = (Math.random() - 0.5) * 0.4;
-      this.vy = (Math.random() - 0.5) * 0.4;
-      this.alpha = Math.random() * 0.5 + 0.1;
-      const palette = ['0,255,231', '191,0,255', '255,45,120'];
+      this.vx = (Math.random() - 0.5) * 0.3;
+      this.vy = (Math.random() - 0.5) * 0.3;
+      this.alpha = Math.random() * 0.4 + 0.1;
+      const palette = ['56,189,248', '129,140,248', '45,212,191', '148,163,184'];
       this.color = palette[Math.floor(Math.random() * palette.length)];
     }
     update() {
@@ -53,7 +53,7 @@
     }
   }
 
-  const COUNT = Math.min(120, Math.floor(W * H / 12000));
+  const COUNT = Math.min(90, Math.floor(W * H / 14000));
   for (let i = 0; i < COUNT; i++) particles.push(new Particle());
 
   function connectParticles() {
@@ -66,7 +66,7 @@
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(0,255,231,${0.04 * (1 - dist / 100)})`;
+          ctx.strokeStyle = `rgba(56,189,248,${0.03 * (1 - dist / 100)})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
@@ -86,9 +86,21 @@
 
 // ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');
+const backToTopBtn = document.getElementById('backToTop');
+
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 50);
+  const scrollY = window.scrollY;
+  navbar.classList.toggle('scrolled', scrollY > 50);
+  if (backToTopBtn) {
+    backToTopBtn.classList.toggle('visible', scrollY > 400);
+  }
 });
+
+if (backToTopBtn) {
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 // ===== HAMBURGER MENU =====
 const hamburger = document.getElementById('hamburger');
@@ -142,7 +154,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   const phrases = [
     'Web Developer',
     'CSE Student',
-    'Game Developer ',
+    'Game Developer',
     'Problem Solver',
     'Tech Enthusiast'
   ];
@@ -255,10 +267,10 @@ async function loadGitHub() {
 
   } catch (err) {
     container.innerHTML = `
-      <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--dim)">
-        <i class="fas fa-exclamation-circle" style="color:var(--neon3);font-size:2rem;margin-bottom:1rem;display:block"></i>
+      <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-muted)">
+        <i class="fas fa-exclamation-circle" style="color:#f87171;font-size:2rem;margin-bottom:1rem;display:block"></i>
         Unable to load repositories.<br>
-        <a href="https://github.com/Devil-Thirupu" target="_blank" style="color:var(--neon)">Visit GitHub directly →</a>
+        <a href="https://github.com/Devil-Thirupu" target="_blank" style="color:var(--primary);text-decoration:none;font-weight:600;margin-top:0.5rem;display:inline-block">Visit GitHub directly →</a>
       </div>`;
   }
 }
@@ -272,6 +284,7 @@ const emailJsPublicKey  = 'UeAY4uKNoOYXmWK4W';
 const emailJsAllowedHostnames = [
   'devil-thirupu.github.io',
   'localhost',
+  '127.0.0.1',
   'your-netlify-domain.netlify.app',
   'your-vercel-domain.vercel.app'
 ];
@@ -457,5 +470,5 @@ if (form) {
 
 
 // ===== CONSOLE EGG =====
-console.log('%c👾 Thirupathi\'s Portfolio', 'font-size:22px;font-weight:900;color:#00ffe7;text-shadow:0 0 10px #00ffe7');
-console.log('%cOpen to opportunities — Let\'s build something amazing! 🚀', 'font-size:13px;color:#bf00ff');
+console.log('%c⚡ Thirupathi\'s Portfolio', 'font-size:20px;font-weight:800;color:#38bdf8;');
+console.log('%cOpen to opportunities — Let\'s build something amazing! 🚀', 'font-size:13px;color:#818cf8;');

@@ -1,99 +1,107 @@
-# Thirupathi | Portfolio Website 🚀
+# Thirupathi | Developer Portfolio 🚀
 
-A professional dark neon-themed portfolio website for **Thirupathi**, CSE Student at JKKN College of Engineering and Technology.
+A modern, human-centered developer portfolio website crafted for **Thirupathi**, Computer Science Engineering student at JKKN College of Engineering and Technology.
+
+Built with clean Vanilla HTML5, modern CSS3 (Custom Design System), and JavaScript — no heavy frameworks or build steps required.
 
 ---
 
-## 📁 Folder Structure
+## 📁 Project Structure
 
-```
+```text
 portfolio/
-├── index.html       ← Main HTML (all sections)
-├── style.css        ← Dark neon theme styles
-├── script.js        ← Particles, typing, GitHub API, animations
-├── images/
-│   └── Picsart_25-08-13_00-25-26-495.png   ← Your profile photo (copy here)
+├── index.html       ← Main semantic HTML structure & meta tags
+├── style.css        ← Human-centered design system, layout & animations
+├── script.js        ← Ambient canvas particles, typing effect, GitHub API & form logic
+├── image/
+│   └── thiru pic.png← Profile image
 ├── assets/
-│   └── resume.pdf   ← Add your resume PDF here
-└── README.md
+│   └── resume.pdf   ← Place your resume PDF here (download target)
+└── README.md        ← Documentation
 ```
 
 ---
 
-## ✅ Setup Steps
+## 🎨 Design System & Highlights
 
-### 1. Add your profile photo
-Copy your photo into the `images/` folder:
-```
-images/Picsart_25-08-13_00-25-26-495.png
-```
-If you use a different filename, update the `src` in `index.html`:
-```html
-<img src="images/YOUR_PHOTO.png" alt="Thirupathi" class="hero-img" .../>
-```
+- **Theme**: Obsidian Slate (`#090d16`) with midnight navy surfaces (`#141c2e`) and soft radial illumination.
+- **Color Accents**: Sky Blue (`#38bdf8`), Soft Indigo (`#818cf8`), and Muted Teal (`#2dd4bf`).
+- **Typography Pairing**:
+  - **[Sora](https://fonts.google.com/specimen/Sora)** — Display titles & headlines.
+  - **[Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)** — High-legibility UI & body copy.
+  - **[JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono)** — Code chips, technical tags, and metric numerals.
+- **Ambient Canvas**: Gentle, low-opacity particle mesh that adds atmospheric depth without distracting grid lines.
+- **OpenGraph Ready**: Full meta tags configured for rich previews when shared on LinkedIn, WhatsApp, and Twitter.
+- **Cross-Browser Standards**: Fully compliant standard and vendor-prefixed properties (e.g., standard `background-clip: text` paired with `-webkit-background-clip: text`).
 
-### 2. Add your resume
-Place your resume PDF in `assets/`:
-```
+---
+
+## ⚡ Features
+
+1. **Hero Section**: Architectural portrait frame with depth lighting, living "Open to Opportunities" status pill with emerald pulse, and dynamic role typing.
+2. **About Section**: Bento-style layout with interactive focus chips (`CSE Student`, `Embedded Dev`, `Experimenter`, `AI Enthusiast`, `Game Developer`) and metric statistic cards.
+3. **Skills Matrix**: Organized category cards for Programming, Hardware, AI Tools, Game Development, and Tools with subtle hover lines.
+4. **Featured Work**: Project showcase cards with live demo and repository links, feature checklists, and technology pills.
+5. **Live GitHub Repositories**: Real-time integration with GitHub REST API displaying latest public repositories, primary languages, and star counts.
+6. **Education Credentials**: Academic milestone card highlighting degree, institution, and active enrollment.
+7. **Production Contact Form**: Includes input sanitization, honeypot spam protection, client-side rate limiting, EmailJS direct submission, and automatic `mailto:` fallback.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Place Your Resume
+Ensure your resume PDF is named `resume.pdf` and placed inside the `assets/` directory:
+```text
 assets/resume.pdf
 ```
 
-### 3. Open in Browser
-Just open `index.html` in your browser (double-click or use VS Code Live Server).
+### 2. Run Locally
+Open `index.html` in your browser, or use the **Live Server** extension in VS Code:
+1. Right-click `index.html` in VS Code.
+2. Select **Open with Live Server**.
 
 ---
 
-## 🎨 Design
+## 🔧 Configuration & Customization
 
-- **Theme**: Dark Neon (Black + Cyan + Purple)
-- **Fonts**: Orbitron (headings) + Exo 2 (body)
-- **Background**: Animated particle canvas with grid
-- **Animations**: Typing effect, scroll reveal, glowing rings
-
----
-
-## 🔧 Customization
-
-### Update Social Links (index.html)
-```html
-<!-- Replace these URLs -->
-<a href="https://github.com/Devil-Thirupu">
-<a href="https://linkedin.com/in/YOUR-USERNAME">
-<a href="https://wa.me/91YOURNUMBER">
+### Updating EmailJS (Contact Form)
+In `script.js`:
+```javascript
+const emailJsServiceId  = 'service_spzhu9o';
+const emailJsTemplateId = 'template_pchkjn2';
+const emailJsPublicKey  = 'UeAY4uKNoOYXmWK4W';
+```
+When deploying to a custom domain, add your hostname to `emailJsAllowedHostnames` in `script.js`:
+```javascript
+const emailJsAllowedHostnames = [
+  'devil-thirupu.github.io',
+  'localhost',
+  '127.0.0.1',
+  'your-custom-domain.com'
+];
 ```
 
-### Change Neon Colors (style.css)
+### Adjusting Accent Colors
+In `style.css`:
 ```css
 :root {
-  --neon:  #00ffe7;   /* Main cyan */
-  --neon2: #bf00ff;   /* Purple accent */
-  --neon3: #ff2d78;   /* Pink accent */
+  --primary:   #38bdf8; /* Primary accent */
+  --secondary: #818cf8; /* Secondary accent */
+  --teal:      #2dd4bf; /* Highlight color */
 }
 ```
 
-### Add More Projects (index.html)
-Copy a `.project-card` block in the projects section and update the content.
-
 ---
 
-## 🚀 Deployment
+## 🌐 Deployment
 
-| Platform | Steps |
+| Platform | Deployment Steps |
 |---|---|
-| **GitHub Pages** | Push to `yourusername.github.io` repo |
-| **Netlify** | Drag & drop the folder at netlify.com/drop |
-| **Vercel** | Import GitHub repo at vercel.com |
+| **GitHub Pages** | Push repository to GitHub $\rightarrow$ Settings $\rightarrow$ Pages $\rightarrow$ Deploy from `main` branch |
+| **Vercel** | Import your GitHub repository directly at [vercel.com](https://vercel.com) |
+| **Netlify** | Drag & drop this folder at [app.netlify.com/drop](https://app.netlify.com/drop) |
 
 ---
 
-## 🐛 Troubleshooting
-
-| Issue | Fix |
-|---|---|
-| Photo not showing | Check the filename matches exactly in `images/` |
-| GitHub repos not loading | Ensure your GitHub username is public |
-| Styles not applying | Use VS Code Live Server (not file://) |
-
----
-
-**Good luck Thirupathi! 🎯**
+© 2026 Thirupathi. Built with precision & caffeine.

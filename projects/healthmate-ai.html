@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthMate AI — Medical Document Assistant | Thirupathi</title>
+  <meta name="description" content="HealthMate AI — An intelligent personal health record and medical document assistant using OCR, LLM, RAG, and AI-powered health analysis." />
+  <meta name="theme-color" content="#090d16" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="HealthMate AI — Intelligent Medical Assistant" />
+  <meta property="og:description" content="Personal health record and medical document assistant using OCR, LLM, RAG, and AI-powered health analysis." />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="project.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='8' fill='%23090d16'/&gt;&lt;text x='8' y='23' font-family='sans-serif' font-weight='800' font-size='20' fill='%23f8fafc'&gt;T&lt;tspan fill='%2338bdf8'&gt;.&lt;/tspan&gt;&lt;/text&gt;&lt;/svg&gt;" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="project-nav-bar">
+    <div class="container project-nav-inner">
+      <a href="../index.html#projects" class="back-link">
+        <i class="fas fa-arrow-left"></i> <span>Back to Projects</span>
+      </a>
+      <a href="../index.html" class="nav-logo">Thiru<span class="dot">.</span></a>
+      <div class="nav-actions">
+        <a href="https://github.com/Devil-Thirupu" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="project-hero">
+      <div class="container">
+        <div class="project-category-badge">
+          <i class="fas fa-heartbeat"></i> Healthcare AI • Document Intelligence • LLM &amp; RAG
+        </div>
+        <h1 class="project-hero-title">HealthMate AI</h1>
+        <p class="project-hero-tagline">
+          An intelligent personal health record and medical document assistant using OCR, LLM, RAG, and AI-powered health information analysis.
+        </p>
+
+        <!-- Quick Meta Strip -->
+        <div class="project-meta-strip">
+          <div class="meta-item">
+            <span class="meta-label">Domain</span>
+            <span class="meta-value">Healthcare AI / Clinical Tech</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Core Architecture</span>
+            <span class="meta-value">RAG + Qwen LLM + OCR</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Supported Languages</span>
+            <span class="meta-value">English, Tamil, Tanglish</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Stack</span>
+            <span class="meta-value">React, FastAPI, Python</span>
+          </div>
+        </div>
+
+        <div class="project-action-buttons">
+          <a href="https://github.com/Devil-Thirupu" target="_blank" class="btn btn-primary">
+            <i class="fab fa-github"></i> View GitHub Repository
+          </a>
+          <!-- Live Demo Link Placeholder -->
+          <a href="#live-demo-section" class="btn btn-outline">
+            <i class="fas fa-external-link-alt"></i> Live Demo (Coming Soon)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section (Clickable Lightbox Screenshots) -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// visual_showcase</span>
+          <h2 class="section-title">Application Screenshots</h2>
+          <p class="section-subtitle">Click on any screenshot below to inspect the interface in high resolution.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Screenshot 1 -->
+          <div class="screenshot-card reveal">
+            <div class="screenshot-media-wrap">
+              <img
+                src="../image/projects/healthmate-ai-1.png"
+                alt="HealthMate AI Dashboard"
+                class="screenshot-img"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="screenshot-placeholder-box" style="display: none;">
+                <i class="fas fa-tachometer-alt"></i>
+                <div class="placeholder-title">Patient Health Record Dashboard</div>
+                <div class="placeholder-hint">Add screenshot: image/projects/healthmate-ai-1.png</div>
+              </div>
+              <div class="screenshot-zoom-overlay">
+                <span class="zoom-badge"><i class="fas fa-search-plus"></i> View Fullscreen</span>
+              </div>
+            </div>
+            <div class="screenshot-caption">
+              <strong>Medical Record &amp; Vitals Dashboard</strong>
+              Visual tracking of patient biomarkers, lab results, and historical medication records.
+            </div>
+          </div>
+
+          <!-- Screenshot 2 -->
+          <div class="screenshot-card reveal">
+            <div class="screenshot-media-wrap">
+              <img
+                src="../image/projects/healthmate-ai-2.png"
+                alt="OCR Document Ingestion"
+                class="screenshot-img"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="screenshot-placeholder-box" style="display: none;">
+                <i class="fas fa-file-invoice"></i>
+                <div class="placeholder-title">OCR Text Extraction &amp; Parsing</div>
+                <div class="placeholder-hint">Add screenshot: image/projects/healthmate-ai-2.png</div>
+              </div>
+              <div class="screenshot-zoom-overlay">
+                <span class="zoom-badge"><i class="fas fa-search-plus"></i> View Fullscreen</span>
+              </div>
+            </div>
+            <div class="screenshot-caption">
+              <strong>Prescription &amp; Lab Report OCR</strong>
+              Scans medical documents and extracts dosage guidelines and diagnosis notes automatically.
+            </div>
+          </div>
+
+          <!-- Screenshot 3 -->
+          <div class="screenshot-card reveal">
+            <div class="screenshot-media-wrap">
+              <img
+                src="../image/projects/healthmate-ai-3.png"
+                alt="Multilingual AI Assistant"
+                class="screenshot-img"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="screenshot-placeholder-box" style="display: none;">
+                <i class="fas fa-comments"></i>
+                <div class="placeholder-title">Multilingual RAG Q&amp;A Chatbot</div>
+                <div class="placeholder-hint">Add screenshot: image/projects/healthmate-ai-3.png</div>
+              </div>
+              <div class="screenshot-zoom-overlay">
+                <span class="zoom-badge"><i class="fas fa-search-plus"></i> View Fullscreen</span>
+              </div>
+            </div>
+            <div class="screenshot-caption">
+              <strong>AI Health Assistant (English, Tamil &amp; Tanglish)</strong>
+              Answers clinical queries grounded strictly on verified patient lab reports.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Narrative Section: Problem & Solution -->
+    <section class="project-content-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// project_overview</span>
+          <h2 class="section-title">The Problem &amp; The Solution</h2>
+        </div>
+
+        <div class="story-grid">
+          <div class="story-card reveal">
+            <h3 class="story-card-title"><i class="fas fa-exclamation-triangle"></i> The Challenge</h3>
+            <p>
+              Navigating personal healthcare records is often stressful and complex. Patients accumulate scattered paper prescriptions, handwritten doctor notes, and clinical lab reports filled with confusing medical jargon.
+            </p>
+            <p>
+              When patients don't fully understand their test values or dosage instructions, adherence drops and anxiety increases. Furthermore, non-native English speakers frequently lack access to healthcare explanations in their native language or colloquial dialect.
+            </p>
+          </div>
+
+          <div class="story-card reveal">
+            <h3 class="story-card-title"><i class="fas fa-lightbulb"></i> The HealthMate AI Solution</h3>
+            <p>
+              HealthMate AI provides a digital medical companion. Patients simply upload photos or scans of their prescriptions and lab reports. Optical Character Recognition (OCR) converts the text into structured digital records.
+            </p>
+            <p>
+              Using a Retrieval-Augmented Generation (RAG) architecture powered by Qwen LLM, the assistant answers patient questions grounded strictly in their actual records — explaining what test results mean, tracking health values over time, and communicating fluently in English, Tamil, and Tanglish.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Features -->
+    <section class="features-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// key_capabilities</span>
+          <h2 class="section-title">Main Features</h2>
+          <p class="section-subtitle">Designed to empower patients and simplify healthcare records.</p>
+        </div>
+
+        <div class="features-detail-grid">
+          <div class="feature-detail-card reveal">
+            <div class="feature-icon-wrap"><i class="fas fa-folder-open"></i></div>
+            <h3 class="feature-detail-title">Medical Report &amp; Prescription Management</h3>
+            <p class="feature-detail-desc">A centralized digital repository that organizes clinic visits, prescriptions, and lab tests chronologically with search and filtering.</p>
+          </div>
+
+          <div class="feature-detail-card reveal">
+            <div class="feature-icon-wrap"><i class="fas fa-file-alt"></i></div>
+            <h3 class="feature-detail-title">OCR-Based Text Extraction</h3>
+            <p class="feature-detail-desc">Extracts key medical metrics, medicine names, frequencies, and doctor observations from printed reports and handwritten slips.</p>
+          </div>
+
+          <div class="feature-detail-card reveal">
+            <div class="feature-icon-wrap"><i class="fas fa-robot"></i></div>
+            <h3 class="feature-detail-title">AI-Powered Health Assistant</h3>
+            <p class="feature-detail-desc">Translates complex clinical terminology into clear, accessible language, explaining what parameters like HbA1c or lipid panels mean.</p>
+          </div>
+
+          <div class="feature-detail-card reveal">
+            <div class="feature-icon-wrap"><i class="fas fa-database"></i></div>
+            <h3 class="feature-detail-title">RAG-Based Medical Record QA</h3>
+            <p class="feature-detail-desc">Retrieval-Augmented Generation queries the patient's own documents so answers are strictly grounded and cited directly from uploaded reports.</p>
+          </div>
+
+          <div class="feature-detail-card reveal">
+            <div class="feature-icon-wrap"><i class="fas fa-chart-line"></i></div>
+            <h3 class="feature-detail-title">Health Value Tracking</h3>
+            <p class="feature-detail-desc">Automatically logs vital indicators over time (blood sugar, cholesterol, blood pressure) to help detect trends and progress.</p>
+          </div>
+
+          <div class="feature-detail-card reveal">
+            <div class="feature-icon-wrap"><i class="fas fa-language"></i></div>
+            <h3 class="feature-detail-title">English, Tamil &amp; Tanglish Support</h3>
+            <p class="feature-detail-desc">Enables bilingual communication so regional users can comfortably query their medical records in Tamil or conversational Tanglish.</p>
+          </div>
+
+          <div class="feature-detail-card reveal">
+            <div class="feature-icon-wrap"><i class="fas fa-apple-alt"></i></div>
+            <h3 class="feature-detail-title">Nutrition &amp; Dietary Insights</h3>
+            <p class="feature-detail-desc">Generates practical dietary and lifestyle recommendations aligned with the patient's diagnosed conditions and lab indicators.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies Used Section -->
+    <section class="tech-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// technology_stack</span>
+          <h2 class="section-title">Technologies Used &amp; Their Purpose</h2>
+          <p class="section-subtitle">How each technology contributes to the HealthMate AI system.</p>
+        </div>
+
+        <div class="tech-explain-grid">
+          <div class="tech-explain-card reveal">
+            <div class="tech-card-header">
+              <span class="tech-badge-pill">Frontend</span>
+              <h3 class="tech-card-name">React</h3>
+            </div>
+            <p class="tech-card-explain">Powers the reactive user interface, providing smooth document uploads, interactive biomarker charts, and conversational chat flows.</p>
+          </div>
+
+          <div class="tech-explain-card reveal">
+            <div class="tech-card-header">
+              <span class="tech-badge-pill">Build Tool</span>
+              <h3 class="tech-card-name">Vite</h3>
+            </div>
+            <p class="tech-card-explain">Ensures lightning-fast local development and produces highly optimized production frontend bundles for quick loading.</p>
+          </div>
+
+          <div class="tech-explain-card reveal">
+            <div class="tech-card-header">
+              <span class="tech-badge-pill">Styling</span>
+              <h3 class="tech-card-name">Tailwind CSS</h3>
+            </div>
+            <p class="tech-card-explain">Provides a modern, responsive design system with accessible components tailored for both desktop and mobile viewing.</p>
+          </div>
+
+          <div class="tech-explain-card reveal">
+            <div class="tech-card-header">
+              <span class="tech-badge-pill">Backend</span>
+              <h3 class="tech-card-name">Python</h3>
+            </div>
+            <p class="tech-card-explain">Serves as the primary language for OCR document extraction pipelines, NLP vectorization, and machine learning integrations.</p>
+          </div>
+
+          <div class="tech-explain-card reveal">
+            <div class="tech-card-header">
+              <span class="tech-badge-pill">API Framework</span>
+              <h3 class="tech-card-name">FastAPI</h3>
+            </div>
+            <p class="tech-card-explain">Provides asynchronous, high-throughput REST API endpoints for multipart file uploads, OCR worker tasks, and streaming LLM responses.</p>
+          </div>
+
+          <div class="tech-explain-card reveal">
+            <div class="tech-card-header">
+              <span class="tech-badge-pill">Database ORM</span>
+              <h3 class="tech-card-name">SQLAlchemy</h3>
+            </div>
+            <p class="tech-card-explain">Manages relational database models, patient session histories, structured lab parameter tracking, and document metadata securely.</p>
+          </div>
+
+          <div class="tech-explain-card reveal">
+            <div class="tech-card-header">
+              <span class="tech-badge-pill">Extraction</span>
+              <h3 class="tech-card-name">OCR (Optical Character Recognition)</h3>
+            </div>
+            <p class="tech-card-explain">Parses uploaded prescription scans and lab report PDFs to extract clinical text, medical values, and doctor signatures into raw digital format.</p>
+          </div>
+
+          <div class="tech-explain-card reveal">
+            <div class="tech-card-header">
+              <span class="tech-badge-pill">Language Model</span>
+              <h3 class="tech-card-name">Qwen LLM</h3>
+            </div>
+            <p class="tech-card-explain">High-efficiency open-weights LLM handling clinical medical reasoning, document summarization, and fluent multilingual synthesis (English &amp; Tamil).</p>
+          </div>
+
+          <div class="tech-explain-card reveal">
+            <div class="tech-card-header">
+              <span class="tech-badge-pill">Information Retrieval</span>
+              <h3 class="tech-card-name">RAG (Retrieval-Augmented Generation)</h3>
+            </div>
+            <p class="tech-card-explain">Retrieves relevant patient document excerpts before prompting the LLM, preventing medical hallucinations and ensuring strict factual accuracy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture & Workflow Section -->
+    <section class="workflow-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// system_architecture</span>
+          <h2 class="section-title">System Workflow</h2>
+          <p class="section-subtitle">How data flows from document upload to actionable health insights.</p>
+        </div>
+
+        <div class="workflow-container">
+          <div class="workflow-step reveal">
+            <span class="step-num">Step 01</span>
+            <h3 class="step-title">Upload &amp; Ingestion</h3>
+            <p class="step-desc">The patient uploads an image or PDF of their prescription or lab report via the React client.</p>
+          </div>
+
+          <div class="workflow-step reveal">
+            <span class="step-num">Step 02</span>
+            <h3 class="step-title">OCR Extraction</h3>
+            <p class="step-desc">FastAPI dispatches the document to the OCR engine, isolating text, dosages, and clinical test ranges.</p>
+          </div>
+
+          <div class="workflow-step reveal">
+            <span class="step-num">Step 03</span>
+            <h3 class="step-title">Vector Chunking &amp; RAG</h3>
+            <p class="step-desc">Extracted content is indexed into a vector store, enabling semantic retrieval of specific patient history.</p>
+          </div>
+
+          <div class="workflow-step reveal">
+            <span class="step-num">Step 04</span>
+            <h3 class="step-title">Qwen LLM Reasoning</h3>
+            <p class="step-desc">The user's question (in English, Tamil, or Tanglish) is paired with retrieved document context and processed by Qwen LLM.</p>
+          </div>
+
+          <div class="workflow-step reveal">
+            <span class="step-num">Step 05</span>
+            <h3 class="step-title">Actionable Insights</h3>
+            <p class="step-desc">The patient receives clear, factual explanations, vital trend updates, and practical dietary recommendations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Action & Other Projects Navigation -->
+    <section class="project-footer-nav" id="live-demo-section">
+      <div class="container">
+        <div class="footer-nav-box reveal">
+          <h3>Interested in HealthMate AI?</h3>
+          <p>Explore the source code on GitHub or reach out to discuss the architecture and implementation.</p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="https://github.com/Devil-Thirupu" target="_blank" class="btn btn-primary">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+            <a href="../index.html#contact" class="btn btn-outline">
+              <i class="fas fa-envelope"></i> Contact Me
+            </a>
+          </div>
+        </div>
+
+        <div class="other-projects-nav">
+          <a href="personal-voice-assistant.html" class="nav-proj-btn">
+            <i class="fas fa-arrow-left"></i>
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block;">Previous Project</span>
+              <span>Personal Voice Assistant</span>
+            </div>
+          </a>
+          <a href="pulse-swift-care.html" class="nav-proj-btn" style="text-align: right;">
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block;">Next Project</span>
+              <span>Pulse Swift Care</span>
+            </div>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Fullscreen Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Screenshot lightbox">
+    <div class="lightbox-dialog">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close fullscreen view">&times;</button>
+      <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- Shared Lightbox Script -->
+  <script src="project.js"></script>
+</body>
+</html>

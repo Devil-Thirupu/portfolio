@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Voice Assistant — Offline ESP32 Assistant | Thirupathi</title>
+  <meta name="description" content="Personal Voice Assistant — An offline smart voice assistant built using ESP32 for local commands and device automation without cloud dependencies." />
+  <meta name="theme-color" content="#090d16" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Personal Voice Assistant — Offline ESP32 Assistant" />
+  <meta property="og:description" content="Offline smart voice assistant built using ESP32 for local device automation and zero cloud reliance." />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="project.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='8' fill='%23090d16'/&gt;&lt;text x='8' y='23' font-family='sans-serif' font-weight='800' font-size='20' fill='%23f8fafc'&gt;T&lt;tspan fill='%2338bdf8'&gt;.&lt;/tspan&gt;&lt;/text&gt;&lt;/svg&gt;" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="project-nav-bar">
+    <div class="container project-nav-inner">
+      <a href="../index.html#projects" class="back-link">
+        <i class="fas fa-arrow-left"></i> <span>Back to Projects</span>
+      </a>
+      <a href="../index.html" class="nav-logo">Thiru<span class="dot">.</span></a>
+      <div class="nav-actions">
+        <a href="https://github.com/Devil-Thirupu" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="project-hero">
+      <div class="container">
+        <div class="project-category-badge">
+          <i class="fas fa-microchip"></i> Embedded Systems • Edge AI • IoT Hardware &amp; Local Automation
+        </div>
+        <h1 class="project-hero-title">Personal Voice Assistant</h1>
+        <p class="project-hero-tagline">
+          An offline smart voice assistant built using ESP32. Performs local commands and device automation without relying on cloud services — runs on its own local server &amp; database.
+        </p>
+
+        <!-- Quick Meta Strip -->
+        <div class="project-meta-strip">
+          <div class="meta-item">
+            <span class="meta-label">Domain</span>
+            <span class="meta-value">Embedded Systems &amp; IoT</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Hardware Controller</span>
+            <span class="meta-value">ESP32 Dual-Core MCU</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Architecture</span>
+            <span class="meta-value">100% Offline / Edge Audio</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Backend</span>
+            <span class="meta-value">Self-Hosted Local Server &amp; DB</span>
+          </div>
+        </div>
+
+        <div class="project-action-buttons">
+          <a href="https://github.com/Devil-Thirupu" target="_blank" class="btn btn-primary">
+            <i class="fab fa-github"></i> View GitHub Repository
+          </a>
+          <a href="#hardware-specs" class="btn btn-outline">
+            <i class="fas fa-tools"></i> Hardware Architecture
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section (Clickable Lightbox Screenshots & Hardware Views) -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// visual_showcase</span>
+          <h2 class="section-title">Hardware &amp; System Screenshots</h2>
+          <p class="section-subtitle">Click on any photo below to inspect the embedded hardware and local dashboard in full resolution.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Screenshot 1 -->
+          <div class="screenshot-card reveal">
+            <div class="screenshot-media-wrap">
+              <img
+                src="../image/projects/voice-assistant-1.png"
+                alt="ESP32 Voice Assistant Prototype Board"
+                class="screenshot-img"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="screenshot-placeholder-box" style="display: none;">
+                <i class="fas fa-microchip"></i>
+                <div class="placeholder-title">ESP32 Hardware Prototype Board</div>
+                <div class="placeholder-hint">Add screenshot: image/projects/voice-assistant-1.png</div>
+              </div>
+              <div class="screenshot-zoom-overlay">
+                <span class="zoom-badge"><i class="fas fa-search-plus"></i> View Fullscreen</span>
+              </div>
+            </div>
+            <div class="screenshot-caption">
+              <strong>ESP32 Processing &amp; Audio Ingestion</strong>
+              Custom breadboard circuit integrating I2S digital microphone, relay modules, and audio feedback speaker.
+            </div>
+          </div>
+
+          <!-- Screenshot 2 -->
+          <div class="screenshot-card reveal">
+            <div class="screenshot-media-wrap">
+              <img
+                src="../image/projects/voice-assistant-2.png"
+                alt="Local Server Control Dashboard"
+                class="screenshot-img"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="screenshot-placeholder-box" style="display: none;">
+                <i class="fas fa-network-wired"></i>
+                <div class="placeholder-title">Local Server Automation Console</div>
+                <div class="placeholder-hint">Add screenshot: image/projects/voice-assistant-2.png</div>
+              </div>
+              <div class="screenshot-zoom-overlay">
+                <span class="zoom-badge"><i class="fas fa-search-plus"></i> View Fullscreen</span>
+              </div>
+            </div>
+            <div class="screenshot-caption">
+              <strong>Self-Hosted Automation Dashboard</strong>
+              Web interface running on the local network displaying connected IoT relays, device statuses, and execution logs.
+            </div>
+          </div>
+
+          <!-- Screenshot 3 -->
+          <div class="screenshot-card reveal">
+            <div class="screenshot-media-wrap">
+              <img
+                src="../image/projects/voice-assistant-3.png"
+                alt="Voice Command Log and Database Records"
+                class="screenshot-img"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="screenshot-placeholder-box" style="display: none;">
+                <i class="fas fa-database"></i>
+                <div class="placeholder-title">Local Database Schema &amp; Logs</div>
+                <div class="placeholder-hint">Add screenshot: image/projects/voice-assistant-3.png</div>
+              </div>
+              <div class="screenshot-zoom-overlay">
+                <span class="zoom-badge"><i class="fas fa-search-plus"></i> View Fullscreen</span>
+              </div>
+            </div>
+            <div class="screenshot-caption">
+              <strong>Private Local Database</strong>
+              Stores scheduled routines and command maps privately with zero data transmission outside the LAN.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Narrative Section: Problem & Solution -->
+    <section class="project-content-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// project_rationale</span>
+          <h2 class="section-title">The Problem &amp; The Solution</h2>
+        </div>
+
+        <div class="story-grid">
+          <div class="story-card reveal">
+            <h3 class="story-card-title"><i class="fas fa-user-shield"></i> The Privacy &amp; Latency Dilemma</h3>
+            <p>
+              Mainstream commercial smart speakers (such as Amazon Alexa or Google Nest) continually stream voice data to remote cloud data centers. This raises critical privacy concerns, potential data leaks, and eavesdropping risks.
+            </p>
+            <p>
+              Furthermore, when home internet connections drop or cloud APIs experience outages, smart home appliances stop responding completely, leaving users without control over their own devices.
+            </p>
+          </div>
+
+          <div class="story-card reveal">
+            <h3 class="story-card-title"><i class="fas fa-bolt"></i> The Offline ESP32 Solution</h3>
+            <p>
+              This Personal Voice Assistant operates completely offline. Powered by an ESP32 microcontroller, wake word detection and speech pattern matching run directly on the chip's dual-core processor.
+            </p>
+            <p>
+              Commands are executed locally with near-zero latency, directly switching relays and communicating with an on-premise local server and database. Not a single byte of personal audio or device data leaves the local network, guaranteeing 100% privacy and unbroken 24/7 reliability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Features -->
+    <section class="features-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// core_capabilities</span>
+          <h2 class="section-title">Key Features</h2>
+          <p class="section-subtitle">Engineered for privacy, reliability, and low power consumption.</p>
+        </div>
+
+        <div class="features-detail-grid">
+          <div class="feature-detail-card reveal">
+            <div class="feature-icon-wrap"><i class="fas fa-microphone-slash"></i></div>
+            <h3 class="feature-detail-title">Offline Voice Processing</h3>
+            <p class="feature-detail-desc">Acoustic sampling and keyword recognition run entirely on the local microcontroller hardware without requiring third-party cloud speech engines.</p>
+          </div>
+
+          <div class="feature-detail-card reveal">
+            <div class="feature-icon-wrap"><i class="fas fa-toggle-on"></i></div>
+            <h3 class="feature-detail-title">Local Command Execution</h3>
+            <p class="feature-detail-desc">Triggers direct hardware GPIO relays to control lights, fans, appliances, and electronic locks with sub-millisecond physical response time.</p>
+          </div>
+
+          <div class="feature-detail-card reveal">
+            <div class="feature-icon-wrap"><i class="fas fa-cogs"></i></div>
+            <h3 class="feature-detail-title">Device Automation</h3>
+            <p class="feature-detail-desc">Supports automated scheduled routines, environmental sensor triggers, and multi-device macro commands managed by the local server.</p>
+          </div>
+
+          <div class="feature-detail-card reveal">
+            <div class="feature-icon-wrap"><i class="fas fa-battery-half"></i></div>
+            <h3 class="feature-detail-title">Low Power Consumption</h3>
+            <p class="feature-detail-desc">Leverages the ESP32's power management profiles, automatic frequency scaling, and ultra-low-power coprocessor to minimize continuous energy drain.</p>
+          </div>
+
+          <div class="feature-detail-card reveal">
+            <div class="feature-icon-wrap"><i class="fas fa-server"></i></div>
+            <h3 class="feature-detail-title">Self-Hosted Server &amp; Database</h3>
+            <p class="feature-detail-desc">Maintains its own local server and database on the LAN, storing device states, schedules, and preferences safely away from cloud platforms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies Used Section -->
+    <section class="tech-section" id="hardware-specs">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// hardware_and_software</span>
+          <h2 class="section-title">Technologies &amp; Their Purpose</h2>
+          <p class="section-subtitle">The actual hardware, firmware, and local backend technologies powering the project.</p>
+        </div>
+
+        <div class="tech-explain-grid">
+          <div class="tech-explain-card reveal">
+            <div class="tech-card-header">
+              <span class="tech-badge-pill">Microcontroller</span>
+              <h3 class="tech-card-name">ESP32</h3>
+            </div>
+            <p class="tech-card-explain">The physical brain of the assistant. Its dual Xtensa 32-bit cores handle audio stream sampling, pattern matching, Wi-Fi networking, and GPIO relay control.</p>
+          </div>
+
+          <div class="tech-explain-card reveal">
+            <div class="tech-card-header">
+              <span class="tech-badge-pill">Firmware</span>
+              <h3 class="tech-card-name">Embedded C / C++</h3>
+            </div>
+            <p class="tech-card-explain">Low-level firmware written for efficient I2S audio buffer handling, hardware timer interrupts, and lightweight mathematical sound processing.</p>
+          </div>
+
+          <div class="tech-explain-card reveal">
+            <div class="tech-card-header">
+              <span class="tech-badge-pill">Backend</span>
+              <h3 class="tech-card-name">Local Server</h3>
+            </div>
+            <p class="tech-card-explain">A private local server running on the home network (such as a Linux host or Raspberry Pi) to coordinate device states, HTTP requests, and automation rules.</p>
+          </div>
+
+          <div class="tech-explain-card reveal">
+            <div class="tech-card-header">
+              <span class="tech-badge-pill">Storage</span>
+              <h3 class="tech-card-name">Local Database</h3>
+            </div>
+            <p class="tech-card-explain">Stores command dictionary mappings, appliance configuration states, and automated scheduled event triggers securely on the local machine.</p>
+          </div>
+
+          <div class="tech-explain-card reveal">
+            <div class="tech-card-header">
+              <span class="tech-badge-pill">Hardware</span>
+              <h3 class="tech-card-name">Care Taker &amp; Relays</h3>
+            </div>
+            <p class="tech-card-explain">Optocoupled relay modules and physical hardware interface that physically switches high-voltage home circuits safely when voice commands match.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture & Workflow Section -->
+    <section class="workflow-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// hardware_pipeline</span>
+          <h2 class="section-title">Signal &amp; Command Workflow</h2>
+          <p class="section-subtitle">How spoken words are transformed into physical hardware actions locally.</p>
+        </div>
+
+        <div class="workflow-container">
+          <div class="workflow-step reveal">
+            <span class="step-num">Step 01</span>
+            <h3 class="step-title">Audio Capture</h3>
+            <p class="step-desc">An I2S digital microphone continuously captures acoustic sound and sends raw pulse-code modulation (PCM) audio to the ESP32.</p>
+          </div>
+
+          <div class="workflow-step reveal">
+            <span class="step-num">Step 02</span>
+            <h3 class="step-title">Edge Keyword Match</h3>
+            <p class="step-desc">The ESP32 analyzes frequency patterns and matches the wake word or command against locally cached models with zero internet access.</p>
+          </div>
+
+          <div class="workflow-step reveal">
+            <span class="step-num">Step 03</span>
+            <h3 class="step-title">Local Server Relay</h3>
+            <p class="step-desc">The validated command is dispatched over the local Wi-Fi network to the local server and logged in the local database.</p>
+          </div>
+
+          <div class="workflow-step reveal">
+            <span class="step-num">Step 04</span>
+            <h3 class="step-title">Physical Execution</h3>
+            <p class="step-desc">The target relay switches on/off immediately, activating the light, fan, or appliance, and the ESP32 emits an audio confirmation tone.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Action & Other Projects Navigation -->
+    <section class="project-footer-nav">
+      <div class="container">
+        <div class="footer-nav-box reveal">
+          <h3>Explore the Firmware &amp; Code</h3>
+          <p>Inspect the ESP32 code, schematic diagrams, and local server integration on GitHub.</p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="https://github.com/Devil-Thirupu" target="_blank" class="btn btn-primary">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+            <a href="../index.html#contact" class="btn btn-outline">
+              <i class="fas fa-envelope"></i> Contact Me
+            </a>
+          </div>
+        </div>
+
+        <div class="other-projects-nav">
+          <a href="pulse-swift-care.html" class="nav-proj-btn">
+            <i class="fas fa-arrow-left"></i>
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block;">Previous Project</span>
+              <span>Pulse Swift Care</span>
+            </div>
+          </a>
+          <a href="healthmate-ai.html" class="nav-proj-btn" style="text-align: right;">
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block;">Next Project</span>
+              <span>HealthMate AI</span>
+            </div>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Fullscreen Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Screenshot lightbox">
+    <div class="lightbox-dialog">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close fullscreen view">&times;</button>
+      <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- Shared Lightbox Script -->
+  <script src="project.js"></script>
+</body>
+</html>

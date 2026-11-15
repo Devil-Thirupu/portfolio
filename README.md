@@ -41,7 +41,10 @@ portfolio/
 1. **Hero Section**: Architectural portrait frame with depth lighting, living "Open to Opportunities" status pill with emerald pulse, and dynamic role typing.
 2. **About Section**: Bento-style layout with interactive focus chips (`CSE Student`, `Embedded Dev`, `Experimenter`, `AI Enthusiast`, `Game Developer`) and metric statistic cards.
 3. **Skills Matrix**: Organized category cards for Programming, Hardware, AI Tools, Game Development, and Tools with subtle hover lines.
-4. **Featured Work**: Project showcase cards with live demo and repository links, feature checklists, and technology pills.
+4. **Featured Work**: Project showcase cards linking to dedicated case study pages:
+   - **HealthMate AI** (`projects/healthmate-ai.html`): Intelligent personal health record and medical document assistant with OCR, Qwen LLM, and RAG.
+   - **Pulse Swift Care** (`projects/pulse-swift-care.html`): Emergency response and patient health monitoring system connecting patients, ambulances, and hospitals.
+   - **Personal Voice Assistant** (`projects/personal-voice-assistant.html`): Offline embedded smart assistant built using ESP32 with local server & database.
 5. **Live GitHub Repositories**: Real-time integration with GitHub REST API displaying latest public repositories, primary languages, and star counts.
 6. **Education Credentials**: Academic milestone card highlighting degree, institution, and active enrollment.
 7. **Production Contact Form**: Includes input sanitization, honeypot spam protection, client-side rate limiting, EmailJS direct submission, and automatic `mailto:` fallback.
